@@ -1,0 +1,14 @@
+<h1><%=@employee.first_name%>
+<%=@employee.last_name%></h1>
+
+<p>Alias: <%=@employee.alias%></p>
+<p>Title: <%=@employee.title%></p>
+<p>Office: <%=@employee.office%></p>
+<img src="<%=@employee.img_url%>" alt="<%@employee.title%>">
+<br><br>
+
+<%= link_to "Index Page", employees_path %> 
+<%= link_to 'Delete this', @employee, method: :delete, data:{confirm:'For real?'}%>
+
+
+
