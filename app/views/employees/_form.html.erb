@@ -1,10 +1,10 @@
-<%= form_for @employee do |f| %>
     <% if flash[:my_errors] %>
         <% flash[:my_errors].each do |error| %>
-            <p style="color: yellow;"><%= error %></p>
+            <p style="color: red;"><%= error %></p>
         <% end %>
     <% end %>
-<h3>
+
+<%= form_for @employee do |f| %>
     <p>
     <%=f.label :first_name %>
     <%=f.text_field :first_name %>

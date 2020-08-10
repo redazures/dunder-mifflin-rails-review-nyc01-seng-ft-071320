@@ -17,6 +17,7 @@ class EmployeesController < ApplicationController
         if @employee.valid?
             redirect_to employee_path(@employee)
         else
+            flash[:my_errors] =  @employee.errors.full_messages
             redirect_to new_employee_path
         end
     end
